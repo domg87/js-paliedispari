@@ -3,22 +3,63 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 
-// 1. chiediamo all'utente di inserire un nome
-var nome = prompt("Inserisci un nome");
+// // 1. chiediamo all'utente di inserire un nome
+// var nome = prompt("Inserisci un nome");
+//
+// // 2. creiamo la funzione
+// function palindroma(verifica){
+//     var reverseString = '';
+//     for(var k in verifica){
+//        reverseString += verifica[(verifica.length - k) - 1];
+//     }
+//   if(verifica === reverseString){
+//     console.log('è palindromo');
+//   }else{
+//     console.log('Non è palindromo');
+//   }
+//   console.log(nome);
+//
+// }
 
-// 2. creiamo la funzione
-function palindroma(verifica){
-    var reverseString = '';
-    for(var k in verifica){
-       reverseString += verifica[(verifica.length - k) - 1];
-    }
-  if(verifica === reverseString){
-    console.log('è palindromo');
-  }else{
-    console.log('Non è palindromo');
-  }
+// --- CORREZZIONE ESERCIZIO ---
+
+// chiedi la parola all'utente
+var parola = prompt("inserisci una parola");
+
+// facciamo il reverse della parola
+var parolaCapovolta = capovolgiParola(parola);
+// parola inserita (esempio (se di 7 lettere)) -1 = 6 | i >= 0 | i--
+// var parolaCapovolta = "";
+// for(var i = parola.length - 1; i >= 0; i--) {
+//   parolaCapovolta = parolaCapovolta + parola[i];
+// }
+// console.log(parola);
+// console.log(parolaCapovolta);
+
+// controllare se le due parole sono uguali
+if(parola == parolaCapovolta){
+  console.log("la parola è palindroma");
+} else {
+  console.log("la parola non è palindroma");
 }
-palindroma('ana');
+
+
+/*
+  Funzione che capovolge una stringa
+  parametri:
+  cosa restituisce? una parola capovolta
+*/
+function capovolgiParola(stinga) {
+  var dtringaCapovolta = "";
+  for(var i = stringa.length - 1; i >= 0; i--) {
+    stringaCapovolta += stringa[i];
+  }
+  return stringaCapovolta;
+}
+
+
+
+
 
 
 // var controllo = true;
